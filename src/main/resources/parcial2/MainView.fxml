@@ -45,7 +45,8 @@
                    GridPane.rowIndex="5" GridPane.columnIndex="1"/>
     </GridPane>
 
-    <Button text="Ejecutar simulación" onAction="#ejecutarSimulacion"/>
+    <Button fx:id="botonCalcularDireccion" text="Calcular dirección física" onAction="#calcularDireccionFisica"/>
+    <Button fx:id="botonSimularReemplazo" text="Simular reemplazo de páginas" onAction="#simularReemplazoDePaginas"/>
 
     <Label text="Resultados:" style="-fx-font-weight: bold;"/>
     <TextArea fx:id="areaResultados" prefHeight="380" wrapText="true" editable="false"/>
