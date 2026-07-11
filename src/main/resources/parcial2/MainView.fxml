@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="parcial2.Controller.MainController"
+      spacing="12">
+    <padding>
+        <Insets top="16" right="16" bottom="16" left="16"/>
+    </padding>
+
+    <Label text="Simulador de MMU: Paginación y Reemplazo de Páginas" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints minWidth="220"/>
+            <ColumnConstraints minWidth="200"/>
+        </columnConstraints>
+
+        <Label text="Implementación 1: Traductor de direcciones" style="-fx-font-weight: bold;"
+               GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+
+        <Label text="Dirección virtual (decimal):" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="campoDireccionVirtual" promptText="Ej: 8500" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Tamaño de página (bytes):" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="campoTamanoPagina" promptText="Ej: 4096" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Implementación 2: Reemplazo de páginas" style="-fx-font-weight: bold;"
+               GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+
+        <Label text="Número de marcos:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="campoNumeroMarcos" promptText="Ej: 3" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="Lista de páginas (separadas por coma):" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <TextField fx:id="campoListaPaginas" promptText="Ej: 7,0,1,2,0,3,0,4,2,3,0,3,2"
+                   GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Button text="Ejecutar simulación" onAction="#ejecutarSimulacion"/>
+
+    <Label text="Resultados:" style="-fx-font-weight: bold;"/>
+    <TextArea fx:id="areaResultados" prefHeight="380" wrapText="true" editable="false"/>
+
+</VBox>
