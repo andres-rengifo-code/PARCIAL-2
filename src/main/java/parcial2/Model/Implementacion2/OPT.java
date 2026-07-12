@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class OPTR {
+public class OPT {
     public Resultados simular(List<Integer> paginas, int numeroMarcos) {
         List<Integer> marcos = new ArrayList<>();      // Lista que representa que paginas estan cargadas y cuantos marcos se encuentran libres
         Queue<Integer> ordenDeEntrada = new LinkedList<>(); // solo se usa para desempatar (criterio FIFO)

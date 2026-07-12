@@ -104,7 +104,7 @@ public class MainController {
 
             ultimoFIFO = new FIFO().simular(paginas, numeroMarcos);
             ultimoLRU = new LRU().simular(paginas, numeroMarcos);
-            ultimoOPT = new OPTR().simular(paginas, numeroMarcos);
+            ultimoOPT = new OPT().simular(paginas, numeroMarcos);
             ultimoNumeroMarcos = numeroMarcos;
 
             StringBuilder texto = new StringBuilder();
