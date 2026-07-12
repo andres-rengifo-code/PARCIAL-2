@@ -46,4 +46,8 @@ public class TablaPaginas {
         siguienteMarcoLibre++;
         return marcoAsignado;
     }
+
+    public Map<Integer, Integer> getPaginaAMarco() {
+        return paginaAMarco;
+    }
 }
