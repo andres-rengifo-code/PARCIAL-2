@@ -67,5 +67,10 @@ public class LogicaTraduccion {
         // calculo para verificar eso
         return (numero & (numero - 1)) == 0;
     }
+
+    // Metodo getter
+    public TablaPaginas getTablaPaginas() {
+        return tablaPaginas;
+    }
 }
 
